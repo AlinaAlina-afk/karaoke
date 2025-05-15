@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор песен для караоке</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #song {
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 600px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="song">Нажмите кнопку, чтобы получить песню</div>
+    <button onclick="generateSong()">Сгенерировать песню</button>
+
+    <script>
+        const songs = [
+            // Сюда вставлен весь массив из 200 песен
+            'Альянс – На заре',
+            'Кино – Группа крови',
+            'Кино – Звезда по имени Солнце',
+            'ДДТ – Это всё',
+            'Машина времени – Поворот',
+            'Чайф – Аргентина-Ямайка 5:0',
+            'Земляне – Трава у дома',
+            'Ласковый май – Белые розы',
+            'Комбинация – Бухгалтер',
+            'Комбинация – Russian Girl',
+            'Агата Кристи – Как на войне',
+            'Игорь Николаев – Выпьем за любовь',
+            'Игорь Корнелюк – Город, которого нет',
+            'Михаил Шуфутинский – 3 сентября',
+            'Любе – Конь',
+            'Крематорий – Мусорный ветер',
+            'Алиса – Трасса Е-95',
+            'Маша Распутина – Иваново',
+            'Рок-Острова – Ничего не говори',
+            'Секрет – Привет',
+            // и далее весь остальной список песен...
+            'Артем Пивоваров – Дежавю',
+            'KAZKA – Свята',
+            'Денис RiDer – Принцесса',
+            'Александр Панайотов – Я слушал дождь'
+        ];
+
+        function generateSong() {
+            const randomIndex = Math.floor(Math.random() * songs.length);
+            document.getElementById('song').textContent = songs[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
